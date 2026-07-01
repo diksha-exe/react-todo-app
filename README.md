@@ -1,3 +1,34 @@
+# React Todo App
+
+A simple Todo application built with React.
+
+## Features
+
+- Add Todo
+- Delete Todo
+- Edit Todo
+- Mark Complete
+- Pending/Completed Status
+- Inline Editing
+- Responsive Layout
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+## Learning Outcomes
+
+- Components
+- Props
+- State
+- useState
+- Conditional Rendering
+- CRUD Operations
+- React Icons
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
