@@ -33,13 +33,14 @@ function App(){
 
     function editTodo(id, newText) {
       setTodos(
-          todos.map(todo =>
-              todo.id === id
-                  ? { ...todo, text: newText }
-                  : todo
-          )
+        todos.map(todo =>
+          todo.id === id
+            ? { ...todo, text: newText }
+            : todo
+        )
       );
     }
+
 
   return (
     <>
