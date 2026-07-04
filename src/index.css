@@ -214,6 +214,24 @@ form input:focus {
   border-radius: 4px;
 }
 
+.clearAll-btn {
+  display: block;
+  margin: 20px auto;
+
+  background-color: #ff4ab1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: max-content;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 14px;
+}
+
+.clearAll-btn:hover {
+  background-color: #89275f;
+}
+
 .delete-btn:hover {
   background-color: #471a1a;
 }

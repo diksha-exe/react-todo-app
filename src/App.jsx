@@ -11,8 +11,12 @@ function App(){
   const [task, setTask] = useState(''); //keyboard task input
     
   const [todos, setTodos] = useState([]); //state variable to store the list of tasks
-  
-  
+  console.log("Todos:", todos);
+
+
+  function clearAllTodos() {
+    setTodos([]);
+  }
 
     function deleteTodo(id) {
       console.log("Deleting:", id);
@@ -48,14 +52,14 @@ function App(){
       if sibling elements then wrap
       into a parent element */}
 
-{/*UI components} */}
+  {/*UI components} */}
       <Header todos={todos} />
       <TodoForm task={task} setTask={setTask} todos={todos} setTodos={setTodos} />
-      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} /> 
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} clearAllTodos={clearAllTodos} /> 
       <Footer />
 
-{/* <> </> is a fragment,
-it is a parent element but does not render in the DOM*/}
+  {/* <> </> is a fragment,
+  it is a parent element but does not render in the DOM*/}
     </>
 
   );
