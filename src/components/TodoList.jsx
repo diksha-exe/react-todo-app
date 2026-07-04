@@ -49,14 +49,17 @@ function TodoList({todos, deleteTodo, toggleTodo, editTodo}) { //receive props f
             />
           ) : (
             <span className="todo-text">
-              {todo.text}
+              {todo.completed ? <s>{todo.text}</s> : todo.text}
             </span>
           )}
 
           <div className="todo-actions">
 
             <span className={todo.completed ? "done" : "pending"}>
-              {todo.completed ? "Completed ✅" : "Pending"}
+              {
+              todo.completed ?
+              "Completed ✅" : "Pending"
+              }
             </span>
 
             <button 
