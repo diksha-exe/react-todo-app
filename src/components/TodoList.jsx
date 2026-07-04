@@ -103,16 +103,16 @@ function TodoList({todos, deleteTodo, toggleTodo, editTodo, clearAllTodos}) { //
     
     <button
       className="clearAll-btn"
-      onClick={async() => {
-        const result = await Swal.fire({
-          title: "Delete all todos?",
-          text: "This action cannot be undone.",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonText: "Yes, delete",
-          cancelButtonText: "Cancel",
-        });
-
+      onClick={
+        async() => {
+          const result = await Swal.fire({
+            title: "Delete all todos?",
+            text: "This action cannot be undone.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete",
+            cancelButtonText: "Cancel",
+          });
         if (result.isConfirmed) {
           clearAllTodos();
         }
