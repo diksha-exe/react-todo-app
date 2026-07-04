@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useState } from "react";
 
@@ -101,8 +103,17 @@ function TodoList({todos, deleteTodo, toggleTodo, editTodo, clearAllTodos}) { //
     
     <button
       className="clearAll-btn"
-      onClick={() => {
-        if (window.confirm("Are you sure you want to delete all todos?")) {
+      onClick={async() => {
+        const result = await Swal.fire({
+          title: "Delete all todos?",
+          text: "This action cannot be undone.",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Yes, delete",
+          cancelButtonText: "Cancel",
+        });
+
+        if (result.isConfirmed) {
           clearAllTodos();
         }
       }}
